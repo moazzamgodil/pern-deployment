@@ -397,5 +397,18 @@ Get and install certificates using interactive prompt
 sudo certbot --nginx
 ```
 
+#### OR
+
+Generate Let’s Encrypt Wildcard SSL Certificate
+
+```
+sudo apt-get install letsencrypt
+```
+
+```
+sudo certbot certonly --manual --preferred-challenges=dns --email webmaster@example.com --server https://acme-v02.api.letsencrypt.org/directory --agree-tos -d example.com -d *.example.com
+```
+
+
 ## Authors
 * **Moazzam Ahmed** - *CEO of Nothing*
